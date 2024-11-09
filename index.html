@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Celebration Email</title>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
+  <style>
+    /* General body styling */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #101820;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+    /* Main container styling */
+    .container {
+      width: 100%;
+      max-width: 600px;
+      background-color: transparent;
+      padding: 20px;
+      text-align: center;
+      color: #e0f7ff;
+      border-radius: 10px;
+      box-shadow: 0 8px 20px rgba(0, 153, 255, 0.6);
+    }
+    /* Header styling */
+    .header {
+      color: #ffffff;
+      font-size: 28px;
+      font-weight: bold;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+    .subheader {
+      font-size: 16px;
+      color: #cce6ff;
+    }
+    /* Logo styling */
+    .logo {
+      margin: 20px 0;
+    }
+    /* Content styling */
+    .main-content {
+      padding: 20px;
+      color: #e0f7ff;
+      border-radius: 8px;
+      background: rgba(10, 15, 31, 0.9);
+    }
+    .celebrate {
+      font-size: 24px;
+      font-weight: bold;
+      color: #00ccff;
+      margin: 0;
+      cursor: pointer;
+      text-shadow: 0px 0px 8px #00ccff;
+    }
+    .message {
+      font-size: 16px;
+      line-height: 1.6;
+      margin: 20px 0;
+      color: #b3e5ff;
+    }
+    /* Button styling */
+    .button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 25px;
+      font-size: 16px;
+      color: #ffffff;
+      background-color: #00ccff;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0px 4px 10px rgba(0, 153, 255, 0.5);
+      transition: background-color 0.3s, box-shadow 0.3s;
+    }
+    .button:hover {
+      background-color: #0078ff;
+      box-shadow: 0px 6px 14px rgba(0, 153, 255, 0.7);
+    }
+    /* Regards section */
+    .regards {
+      margin-top: 30px;
+      font-size: 14px;
+      color: #b3e5ff;
+      border-top: 1px solid #33415c;
+      padding-top: 20px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+    <!-- Header Section -->
+    <div class="header">
+      Welcome to the Microsoft Learn Student Club!
+    </div>
+    <div class="subheader">
+      Empowering future tech leaders
+    </div>
+    
+    <!-- Logo -->
+    <div class="logo">
+      <img src="./main.png" alt="Microsoft Learn Student Club" width="120">
+    </div>
+    
+    <!-- Main Content -->
+    <div class="main-content">
+      <p class="celebrate" id="celebrate-text">🎉 Congratulations! 🎉</p>
+      <p class="message">
+        We are thrilled to announce that you have been selected to join the <b>Microsoft Learn Student Club</b>! Your commitment to technology and learning has earned you a place in our community.<br><br>
+        Prepare yourself for an incredible journey of growth, collaboration, and hands-on experience with fellow tech enthusiasts.
+      </p>
+      
+      <!-- Call to Action Button -->
+      <a href="#" class="button">Get Started</a>
+    </div>
+    
+    <!-- Regards Block -->
+    <div class="regards">
+      Best wishes,<br>
+      Chandu Neelam,<br>
+      Microsoft Learn Student Ambassador,<br>
+      The Microsoft Learn Student Club Team
+    </div>
+  </div>
+
+  <script>
+    // JavaScript for Confetti on Hover
+    document.getElementById('celebrate-text').addEventListener('mouseenter', function() {
+      confetti({
+        particleCount: 100,
+        spread: 70,
+        origin: { y: 0.6 }
+      });
+    });
+  </script>
+</body>
+</html>
